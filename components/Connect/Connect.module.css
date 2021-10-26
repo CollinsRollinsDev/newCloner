@@ -1,0 +1,48 @@
+.container{
+    height: 88vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.formBox{
+    height: auto;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(192, 192, 192);
+    box-shadow: 2px 2px 5px black, -2px -2px 5px black;
+    row-gap:20px;
+    padding: 5% 0;
+    border-radius: 10px;
+}
+.formBox p{
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    color: black;
+}
+.formBox input{
+    height: 40px;
+    width: 80%;
+    border-radius: 10px;
+    padding: 0 2%;
+    outline: none;
+    border-style: solid;
+    border-color: rgb(56, 56, 231);
+}
+.formBox button {
+    background-color: rgb(44, 44, 238);
+    height: 40px;
+    width: 50%;
+    border-style: solid;
+    border-color: transparent;
+    border-radius: 10px;
+    color: white;
+    font-weight: 700;
+}
+.formBox button:active{
+    opacity: 0;
+}

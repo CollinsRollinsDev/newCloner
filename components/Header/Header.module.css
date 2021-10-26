@@ -70,29 +70,65 @@
     position: fixed;
     top: 0;
     z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .overlay .cardHolder{
     margin-top: 100px;
-    min-height: 300px;
-    width: 100%;
-    /* background-color: green; */
-    padding: 0 2%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    row-gap: 20px;
-    flex-direction: column;
-}
-.overlay .cardHolder .card{
-    height: 40px;
-    width: 60%;
-    background-color: whitesmoke;
+    min-height: auto;
+    width: 70%;
+    background-color: white;
+    padding:0;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    row-gap: 0px;
+    border-radius: 10px;
+    overflow: hidden;
+    row-gap: 5px;
+    flex-direction: column;
+    padding-bottom: 50px;
+    padding-top: 10px;
+}
+.info{
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+    color: rgb(43, 43, 43);
+    font-weight: 700;
+}
+.overlay .cardHolder .card{
+    height: 40px;
+    width: 90%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: transparent transparent transparent;
+    background-color: rgb(221, 216, 216);
+    display: flex;
+    justify-content: flex-start;
+    color: blue;
+    align-items: center;
     padding: 0 2%;
     column-gap: 20px;
+    border-radius: 10px;
     cursor: pointer;
+}
+.overlay .cardHolder .cardHead{
+    height: 80px;
+    width: 90%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: transparent transparent transparent;
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-start;
+    color: blue;
+    align-items: center;
+    padding: 0 2%;
+    font-weight: 700;
+    column-gap: 20px;
+    border-radius: 10px;
 }
 .overlay .cardHolder .card:active{
     opacity: 0;
@@ -102,16 +138,17 @@
     height: 35px;
     width: 35px;
     border-radius: 100%;
-    background-color: blue;
+    background-color: white;
+    position: relative;
 }
 .overlay .cardHolder .card .text{
     font-size: 13px;
     font-weight: 600;
-    color: gray;
+    color: rgb(41, 41, 163);
 }
 .narrative{
-    position: absolute;
-    top: 80%;
+    position: relative;
+    top: 20%;
     text-align: center;
     color: white;
     margin: 0 2%;

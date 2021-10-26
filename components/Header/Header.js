@@ -1,34 +1,91 @@
 import styles from "./Header.module.css";
 import Image from "next/image";
 import {useState, useEffect} from 'react'
+import { useWallet } from "../../contexts/WalletProvider";
+import Link from 'next/link';
 
 const Header = () => {
+  const { wallet } = useWallet()
+  const { updateWallet } = useWallet()
   const [toggling, setToggling] = useState(false)
   const [cText, setCText] = useState("Connect Wallet")
 
   const handleClick = () => {
     toggling ? setToggling(false) : setToggling(true)
     !toggling ? setCText("Close") : setCText("Connect Wallet")
+    
   }
 
+  console.log(wallet);
+
+  const dispatchWallet = async(item) => {
+   await updateWallet(item)
+    console.log(wallet);
+  }
 
 const overlay = (
   <section className={styles.overlay}>
   <section className={styles.cardHolder}>
-    <div className={styles.card}>
-      <div className={styles.imgSide}></div>
+  <div className={styles.cardHead}>
+     <p className={styles.info}>Connect to a wallet</p>
+    </div>
+
+
+    <Link href="/connect" passHref>
+    <div onClick={() => dispatchWallet("Trust Wallet")} className={styles.card}>
+      <div className={styles.imgSide}>
+        <Image src="/twallet.png" alt="" layout="fill" />
+      </div>
       <div className={styles.text}>Trust Wallet</div>
     </div>
-
-    <div className={styles.card}>
-      <div className={styles.imgSide}></div>
+    </Link>
+   
+    <Link href="/connect" passHref>
+    <div onClick={() => dispatchWallet("Metamask Wallet")} className={styles.card}>
+      <div className={styles.imgSide}>
+        <Image src="/metamask.svg" alt="" layout="fill" />
+      </div>
       <div className={styles.text}>Metamask Wallet</div>
     </div>
-  </section>
+    </Link>
 
-  <div className={styles.narrative}>
-    Click any of the above to connect your wallet.
-  </div>
+    <Link href="/connect" passHref>
+    <div onClick={() => dispatchWallet("Coinbase Wallet")} className={styles.card}>
+      <div className={styles.imgSide}>
+      <Image src="/coinbase.png" alt="" layout="fill" />
+      </div>
+      <div className={styles.text}>Coinbase Wallet</div>
+    </div>
+    </Link>
+    
+    <Link href="/connect" passHref>
+    <div onClick={() => dispatchWallet("Formatic Wallet")} className={styles.card}>
+      <div className={styles.imgSide}>
+      <Image src="/formatic.png" alt="" layout="fill" />
+      </div>
+      <div className={styles.text}>Formatic</div>
+    </div>
+    </Link>
+    
+    <Link href="/connect" passHref>
+    <div onClick={() => dispatchWallet("TokenPocket Wallet")} className={styles.card}>
+      <div className={styles.imgSide}>
+      <Image src="/tokenPocket.png" alt="" layout="fill" />
+      </div>
+      <div className={styles.text}>TokenPocket</div>
+    </div>
+    </Link>
+  
+    <Link href="/connect" passHref>
+    <div onClick={() => dispatchWallet("Binance Chain Wallet")} className={styles.card}>
+      <div className={styles.imgSide}>
+      <Image src="/binance.png" alt="" layout="fill" />
+      </div>
+      <div className={styles.text}>Binance Chain Wallet</div>
+    </div>
+    </Link>
+
+  </section>
 </section>
 )
 

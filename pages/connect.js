@@ -3,6 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import HomePage from '../components/Header/HomePage/HomePage'
 import { WalletProvider } from '../contexts/WalletProvider'
+import Connect from '../components/Connect/Connect'
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
         <meta name="description" content="Dummy for now" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-        <HomePage />
+        <Connect />
     </div>
     
   )
