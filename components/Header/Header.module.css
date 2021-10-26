@@ -108,8 +108,21 @@
     font-weight: 600;
     color: gray;
 }
-
+.connection{
+    height: 40px !important;
+    width: 100px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 @media screen and (min-width:872px){
+    .connection{
+        height: 40px !important;
+        width: 100px !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     .container svg{
         display: none;
     }

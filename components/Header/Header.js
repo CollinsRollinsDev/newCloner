@@ -4,9 +4,11 @@ import {useState, useEffect} from 'react'
 
 const Header = () => {
   const [toggling, setToggling] = useState(false)
+  const [cText, setCText] = useState("Connect Wallet")
 
   const handleClick = () => {
     toggling ? setToggling(false) : setToggling(true)
+    !toggling ? setCText("Close") : setCText("Connect Wallet")
   }
 
 
@@ -48,7 +50,7 @@ const overlay = (
             <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" />
           </svg> */}
           <div onClick={handleClick} className={styles.deskConnect}>
-            Connect Wallet
+            {cText}
           </div>
         </div>
       </section>
