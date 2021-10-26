@@ -1,0 +1,45 @@
+.container{
+    height: 70px;
+    width: 100%;
+    background-color: white;
+    box-shadow: 1px 1px 5px rgb(29, 29, 29);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+    padding: 0 2%;
+
+}
+.left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+}
+.logoArea{
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    position: relative;
+    /* margin: 2%; */
+}
+.siteName{
+    font-size: 22px;
+    font-weight: 700;
+    color: black;
+}
+.right{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 10px;
+    padding: 0 2%;
+}
+.container{
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+}
+.container svg{
+    margin-top: 10px;
+}

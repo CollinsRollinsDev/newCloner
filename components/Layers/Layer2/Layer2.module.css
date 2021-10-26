@@ -1,0 +1,49 @@
+.container{
+    height: auto;
+    width: 100%;
+    background-color: transparent;
+}
+.head{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+.boxModel{
+    height: auto;
+    width: 100%;
+    padding: 0 5%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 20px;
+    flex-direction: column;
+}
+.card1, .card2, .card3, .card4{
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /* background-color: red; */
+    row-gap: 10px;
+}
+.imgArea{
+    height: 50px;
+    width: 50px;
+    background-color: gold;
+}
+.title{
+    text-align: center;
+    font-size: 17px;
+    color: black;
+    font-weight: 700;
+}
+.content{
+    color: rgb(116, 114, 114);
+    text-align: center;
+    width: 85%;
+    font-size: 17px;
+}
