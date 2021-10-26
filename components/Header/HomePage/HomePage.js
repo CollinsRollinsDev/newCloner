@@ -1,3 +1,4 @@
+import Footer from '../../Footer/Footer';
 import Layer1 from '../../Layers/Layer1/Layer1';
 import Layer2 from '../../Layers/Layer2/Layer2';
 import Layer3 from '../../Layers/Layer3/Layer3';
@@ -16,6 +17,7 @@ const HomePage = () => {
             <Layer3 />
             <Layer4 />
             <Layer5 />
+            <Footer />
         </section>
     )
 }
