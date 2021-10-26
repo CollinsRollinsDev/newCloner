@@ -218,4 +218,15 @@
         align-items: center;
         margin-bottom: 20px;
     }
+    .cont{
+       text-align: left;
+       font: 15px;
+    }
+    .bottom div li{
+        text-align: left;
+    }
+    .bottom div{
+        text-align: left;
+        align-items: flex-start;
+    }
 }
