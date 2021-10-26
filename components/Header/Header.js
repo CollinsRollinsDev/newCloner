@@ -1,8 +1,33 @@
 import styles from "./Header.module.css";
 import Image from "next/image";
+import {useState, useEffect} from 'react'
 
 const Header = () => {
+  const [toggling, setToggling] = useState(false)
+
+  const handleClick = () => {
+    toggling ? setToggling(false) : setToggling(true)
+  }
+
+
+const overlay = (
+  <section className={styles.overlay}>
+  <section className={styles.cardHolder}>
+    <div className={styles.card}>
+      <div className={styles.imgSide}></div>
+      <div className={styles.text}>Trust Wallet</div>
+    </div>
+
+    <div className={styles.card}>
+      <div className={styles.imgSide}></div>
+      <div className={styles.text}>Metamask Wallet</div>
+    </div>
+  </section>
+</section>
+)
+
   return (
+    <>
     <section className={styles.container}>
       <section className={styles.left}>
         <div className={styles.logoArea}>
@@ -22,12 +47,17 @@ const Header = () => {
           >
             <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" />
           </svg> */}
-          <div className={styles.deskConnect}>
+          <div onClick={handleClick} className={styles.deskConnect}>
             Connect Wallet
           </div>
         </div>
       </section>
     </section>
+
+          {
+            toggling ? overlay : null
+          }
+    </>
   );
 };
 
