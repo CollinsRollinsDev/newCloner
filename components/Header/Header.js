@@ -13,7 +13,7 @@ const Header = () => {
       <section className={styles.right}>
         <div className={styles.connection}>
           {/* Connect Wallet */}
-          <svg
+          {/* <svg
             xmlns="http://www.w3.org/2000/svg"
             width="18"
             height="18"
@@ -21,7 +21,7 @@ const Header = () => {
             viewBox="0 0 24 24"
           >
             <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" />
-          </svg>
+          </svg> */}
           <div className={styles.deskConnect}>
             Connect Wallet
           </div>
