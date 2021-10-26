@@ -38,7 +38,11 @@ const Footer = () => {
           </div>
         </section>
 
-        <section className={styles.third}>
+     
+      </section>
+
+
+      <section className={styles.third}>
           <section className={styles.top}>
             <div className={styles.img}></div>
             <div className={styles.siteName}>OpenSea</div>
@@ -92,7 +96,7 @@ const Footer = () => {
             </div>
           </section>
         </section>
-      </section>
+
 
       <section className={styles.fourth}>
         <p>© 2018 - 2021 Ozone Networks, Inc</p>

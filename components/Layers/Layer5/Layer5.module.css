@@ -62,6 +62,23 @@
     height: 50px;
     width: 50%;
     font-size: 17px;
+    display: flex;
+        justify-content: center;
+        align-items: center;
 }
 
-/* <iframe width="357" height="201" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */
+@media screen and (min-width:872px){
+    .vidHolder{
+        height: 570px;
+        width: 100%;
+        /* background-color: red; */
+        position: relative;
+    }
+    .container button{
+        width: 25%;
+        font-size: 17px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
