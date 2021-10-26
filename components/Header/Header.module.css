@@ -43,3 +43,24 @@
 .container svg{
     margin-top: 10px;
 }
+.deskConnect{
+    display: none;
+}
+
+@media screen and (min-width:872px){
+    .container svg{
+        display: none;
+    }
+    .deskConnect{
+        display: block;
+        padding: 2%;
+        background-color: blue;
+        color: white;
+        font-size: 14px;
+        text-align: center;
+        border-radius: 10px;
+        width: 100%;
+        font-weight: 700;
+        cursor: pointer;
+    }
+}
