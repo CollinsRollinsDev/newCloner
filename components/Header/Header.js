@@ -6,7 +6,7 @@ const Header = () => {
     <section className={styles.container}>
       <section className={styles.left}>
         <div className={styles.logoArea}>
-          <Image src="/favicon.ico" alt="" layout="fill" />
+          <Image src="/logoColored.png" alt="" layout="fill" />
         </div>
         <div className={styles.siteName}>OpenSea</div>
       </section>

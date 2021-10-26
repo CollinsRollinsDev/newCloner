@@ -1,4 +1,5 @@
 import styles from "./Footer.module.css";
+import Image from 'next/image';
 
 const Footer = () => {
   return (
@@ -44,7 +45,9 @@ const Footer = () => {
 
       <section className={styles.third}>
           <section className={styles.top}>
-            <div className={styles.img}></div>
+            <div className={styles.img}>
+              <Image src="/logoWhite.png" alt="" layout="fill" />
+            </div>
             <div className={styles.siteName}>OpenSea</div>
             <div className={styles.cont}>
               The world’s first and largest digital marketplace for crypto
