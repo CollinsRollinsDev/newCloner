@@ -25,6 +25,10 @@ const overlay = (
       <div className={styles.text}>Metamask Wallet</div>
     </div>
   </section>
+
+  <div className={styles.narration}>
+    Click any of the above to connect your wallet.
+  </div>
 </section>
 )
 
@@ -40,7 +44,7 @@ const overlay = (
       <section className={styles.right}>
         <div className={styles.connection}>
           {/* Connect Wallet */}
-          {/* <svg
+          <svg
             xmlns="http://www.w3.org/2000/svg"
             width="18"
             height="18"
@@ -48,7 +52,7 @@ const overlay = (
             viewBox="0 0 24 24"
           >
             <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" />
-          </svg> */}
+          </svg>
           <div onClick={handleClick} className={styles.deskConnect}>
             {cText}
           </div>

@@ -48,7 +48,7 @@
     margin-top: 10px;
 }
 .deskConnect{
-    display: block;
+    display: none;
     padding: 2%;
     background-color: blue;
     color: white;
@@ -108,21 +108,21 @@
     font-weight: 600;
     color: gray;
 }
-.connection{
+/* .connection{
     height: 40px !important;
     width: 100px !important;
     display: flex;
     align-items: center;
     justify-content: center;
-}
+} */
 @media screen and (min-width:872px){
-    .connection{
+    /* .connection{
         height: 40px !important;
         width: 100px !important;
         display: flex;
         align-items: center;
         justify-content: center;
-    }
+    } */
     .container svg{
         display: none;
     }
