@@ -26,7 +26,7 @@ const overlay = (
     </div>
   </section>
 
-  <div className={styles.narration}>
+  <div className={styles.narrative}>
     Click any of the above to connect your wallet.
   </div>
 </section>
@@ -45,6 +45,7 @@ const overlay = (
         <div className={styles.connection}>
           {/* Connect Wallet */}
           <svg
+          onClick={handleClick}
             xmlns="http://www.w3.org/2000/svg"
             width="18"
             height="18"
@@ -53,7 +54,7 @@ const overlay = (
           >
             <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" />
           </svg>
-          <div onClick={handleClick} className={styles.deskConnect}>
+          <div className={styles.deskConnect}>
             {cText}
           </div>
         </div>

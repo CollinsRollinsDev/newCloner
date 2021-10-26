@@ -41,11 +41,12 @@
 }
 .container{
     display: flex;
-    /* justify-content: center;
-    align-items: center; */
 }
 .container svg{
     margin-top: 10px;
+}
+.container svg:active{
+    opacity: 0;
 }
 .deskConnect{
     display: none;
@@ -63,7 +64,7 @@
     opacity: 0;
 }
 .overlay{
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background-color: rgba(43, 43, 245, 0.904);
     position: fixed;
@@ -107,6 +108,15 @@
     font-size: 13px;
     font-weight: 600;
     color: gray;
+}
+.narrative{
+    position: absolute;
+    top: 90%;
+    text-align: center;
+    color: white;
+    margin: 0 2%;
+    font-size: 14px;
+    width: 98%;
 }
 /* .connection{
     height: 40px !important;
