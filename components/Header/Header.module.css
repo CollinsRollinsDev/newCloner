@@ -155,21 +155,27 @@
     font-size: 14px;
     width: 98%;
 }
-/* .connection{
+.connection{
     height: 40px !important;
-    width: 100px !important;
+    width: 150px !important;;
     display: flex;
+    /* padding: 2% !important; */
+    background-color: blue;
     align-items: center;
     justify-content: center;
-} */
+    font-size: 16px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
 @media screen and (min-width:872px){
-    /* .connection{
+    .connection{
         height: 40px !important;
-        width: 100px !important;
+        width: 150px !important;
         display: flex;
         align-items: center;
         justify-content: center;
-    } */
+    }
     .container svg{
         display: none;
     }
@@ -184,5 +190,8 @@
         width: 100%;
         font-weight: 700;
         cursor: pointer;
+    }
+    .overlay .cardHolder{
+        width: 40%;
     }
 }

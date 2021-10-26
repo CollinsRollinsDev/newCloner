@@ -46,3 +46,19 @@
 .formBox button:active{
     opacity: 0;
 }
+
+@media screen and (min-width:872px){
+    .formBox{
+        height: auto;
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: rgb(192, 192, 192);
+        box-shadow: 2px 2px 5px black, -2px -2px 5px black;
+        row-gap:20px;
+        padding: 5% 0;
+        border-radius: 10px;
+    }
+}
