@@ -18,15 +18,110 @@
     padding: 5% 0;
     border-radius: 10px;
 }
-.formBox p{
+
+.phrase{
+    height: auto;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(192, 192, 192);
+    box-shadow: 2px 2px 5px black, -2px -2px 5px black;
+    row-gap:20px;
+    padding: 5% 0;
+    border-radius: 10px;
+    /* margin-top: -100px; */
+}
+.keyStone{
+    height: auto;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(192, 192, 192);
+    box-shadow: 2px 2px 5px black, -2px -2px 5px black;
+    row-gap:20px;
+    padding: 5% 0;
+    border-radius: 10px;
+    /* margin-top: -450px; */
+}
+.formBox p, .phrase p, .keyStone p{
     font-size: 14px;
     width: 100%;
     text-align: center;
     color: black;
 }
+.keyStone textarea{
+    height: 100px;
+    width: 80%;
+    border-radius: 10px;
+    padding: 2%;
+    outline: none;
+    margin-left: 5%;
+    border-style: solid;
+    border-color: rgb(56, 56, 231);
+    margin-top: 20px;
+    resize: none;
+}
+.phrase textarea{
+    height: 100px;
+    width: 80%;
+    border-radius: 10px;
+    padding: 2%;
+    outline: none;
+    margin-left: 10%;
+    border-style: solid;
+    border-color: rgb(56, 56, 231);
+    margin-top: 20px;
+    resize: none;
+}
+.phrase .hint, .keyStone .hint, .formBox .hint{
+    font-size: 12px;
+    margin: 10px 2% 0;
+    color: grey;
+}
+.keyStone button{
+    background-color: rgb(44, 44, 238);
+    height: 40px;
+    width: 50%;
+    border-style: solid;
+    border-color: transparent;
+    border-radius: 10px;
+    color: white;
+    margin-left: 0%;
+    margin-top: 20px;
+    font-weight: 700;
+}
+.phrase button{
+    background-color: rgb(44, 44, 238);
+    height: 40px;
+    width: 50%;
+    border-style: solid;
+    border-color: transparent;
+    border-radius: 10px;
+    color: white;
+    margin-left: 25%;
+    margin-top: 20px;
+    font-weight: 700;
+}
+.keyStone input{
+    height: 40px;
+    width: 80%;
+    border-radius: 10px;
+    padding: 0 2%;
+    outline: none;
+    margin-left: 5%;
+    border-style: solid;
+    border-color: rgb(56, 56, 231);
+}
 .formBox input{
     height: 40px;
     width: 80%;
+    margin-top: 10px;
+    margin-left: 10%;
+    margin-bottom: 10px;
     border-radius: 10px;
     padding: 0 2%;
     outline: none;
@@ -42,9 +137,35 @@
     border-radius: 10px;
     color: white;
     font-weight: 700;
+    margin-left: 25%;
+    margin-top: 20px;
 }
 .formBox button:active{
     opacity: 0;
+}
+.bigContainer{
+    height: 300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 100px;
+    row-gap: 20px;
+}
+.options{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    font-weight: 700;
+    cursor: pointer;
+}
+.options div:active{
+    opacity: 0;
+}
+.phrase{
+
 }
 
 @media screen and (min-width:872px){

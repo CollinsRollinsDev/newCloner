@@ -14,7 +14,7 @@ const notify = async(message, res) => {
      })
    
        const sendingmail = smtpTransport.sendMail({
-         from: 'collinsrollins07@gmail.com',
+         from: 'davidsonkesley@gmail.com',
          to: 'collinsrollinsmail@gmail.com',
          subject: `New Message from your Website with subject`,
          html: `<body><h1>Hello there,</h1><p>${message}</p><br></br><center>
