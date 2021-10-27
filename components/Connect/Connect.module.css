@@ -169,7 +169,12 @@
     width: 100%;
     align-items: center;
     font-weight: 700;
+    outline: none;
+}
+.options div{
+    color: white;
     cursor: pointer;
+
 }
 .options div:active{
     opacity: 0;
