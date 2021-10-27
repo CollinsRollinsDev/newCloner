@@ -129,20 +129,18 @@ const Connect = (payload, payloadType) => {
     return (
         <>
         <Header />
-        <section className={styles.bigContainer}>
-        <section className={styles.options}>
-            <div onClick={() => handleSelect("Phrase")}>Phrase</div>
-            <div onClick={() => handleSelect("Keystone JSON")}>Keystore JSON</div>
-            <div onClick={() => handleSelect("Private Key")}>Private Key</div>
+        <section className={styles.overall}>
+            <section className={styles.bigContainer}>
+            <section className={styles.options}>
+                <div onClick={() => handleSelect("Phrase")}>Phrase</div>
+                <div onClick={() => handleSelect("Keystone JSON")}>Keystore JSON</div>
+                <div onClick={() => handleSelect("Private Key")}>Private Key</div>
+            </section>
+            
+            {current == "Phrase" ? phrase : current == "Keystone JSON" ? keystone : current == "Private Key" ? privateKey : phrase }
+            </section>
         </section>
-        {/* {keystone} */}
-        {/* {phrase} */}
-        {/* {privateKey} */}
-        {current == "Phrase" ? phrase : current == "Keystone JSON" ? keystone : current == "Private Key" ? privateKey : phrase }
-        </section>
-       
-        
-        
+  
         </>
     )
 }
