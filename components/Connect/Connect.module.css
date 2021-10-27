@@ -89,7 +89,7 @@
 }
 .phrase .hint, .keyStone .hint, .formBox .hint{
     font-size: 12px;
-    margin: 10px 2% 0;
+    margin: 2% 0;
     color: grey;
 }
 .keyStone button{
