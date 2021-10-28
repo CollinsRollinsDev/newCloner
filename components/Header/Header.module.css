@@ -1,0 +1,197 @@
+.container{
+    height: 70px;
+    width: 100%;
+    background-color: white;
+    box-shadow: 1px 1px 5px rgb(29, 29, 29);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+    padding: 0 2%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+
+}
+.left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+}
+.logoArea{
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    position: relative;
+    /* margin: 2%; */
+}
+.siteName{
+    font-size: 22px;
+    font-weight: 700;
+    color: black;
+}
+.right{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 10px;
+    padding: 0 2%;
+}
+.container{
+    display: flex;
+}
+.container svg{
+    margin-top: 10px;
+}
+.container svg:active{
+    opacity: 0;
+}
+.deskConnect{
+    display: none;
+    padding: 2%;
+    background-color: blue;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 10px;
+    width: 100%;
+    font-weight: 700;
+    cursor: pointer;
+}
+.deskConnect:active{
+    opacity: 0;
+}
+.overlay{
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgba(43, 43, 245, 0.904);
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.overlay .cardHolder{
+    margin-top: 100px;
+    min-height: auto;
+    width: 70%;
+    background-color: white;
+    padding:0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 0px;
+    border-radius: 10px;
+    overflow: hidden;
+    row-gap: 5px;
+    flex-direction: column;
+    padding-bottom: 50px;
+    padding-top: 10px;
+}
+.info{
+    font-size: 14px;
+    text-align: center;
+    width: 100%;
+    color: rgb(43, 43, 43);
+    font-weight: 700;
+}
+.overlay .cardHolder .card{
+    height: 40px;
+    width: 90%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: transparent transparent transparent;
+    background-color: rgb(221, 216, 216);
+    display: flex;
+    justify-content: flex-start;
+    color: blue;
+    align-items: center;
+    padding: 0 2%;
+    column-gap: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.overlay .cardHolder .cardHead{
+    height: 80px;
+    width: 90%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: transparent transparent transparent;
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-start;
+    color: blue;
+    align-items: center;
+    padding: 0 2%;
+    font-weight: 700;
+    column-gap: 20px;
+    border-radius: 10px;
+}
+.overlay .cardHolder .card:active{
+    opacity: 0;
+}
+
+.overlay .cardHolder .card .imgSide{
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+    background-color: white;
+    position: relative;
+}
+.overlay .cardHolder .card .text{
+    font-size: 13px;
+    font-weight: 600;
+    color: rgb(41, 41, 163);
+}
+.narrative{
+    position: relative;
+    top: 20%;
+    text-align: center;
+    color: white;
+    margin: 0 2%;
+    font-size: 14px;
+    width: 98%;
+}
+.connection{
+    height: 40px !important;
+    width: 150px !important;;
+    display: flex;
+    /* padding: 2% !important; */
+    background-color: blue;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+@media screen and (min-width:872px){
+    .connection{
+        height: 40px !important;
+        width: 150px !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container svg{
+        display: none;
+    }
+    .deskConnect{
+        display: block;
+        padding: 2%;
+        background-color: blue;
+        color: white;
+        font-size: 14px;
+        text-align: center;
+        border-radius: 10px;
+        width: 100%;
+        font-weight: 700;
+        cursor: pointer;
+    }
+    .overlay .cardHolder{
+        width: 40%;
+    }
+}
