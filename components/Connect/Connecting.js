@@ -8,16 +8,6 @@ const Connecting = () => {
     const { wallet } = useWallet()
     const { updateWallet } = useWallet()
 
-
-
-    // const dispatchItems = async(item) => {
-    //     const yes = updateWallet(item)
-    //     console.log("Moved")
-    //     if(yes){
-    //         // router.push("/connect")
-    //     }
-    //   }
-
     return (
         <section className={styles.overlay}>
         <section className={styles.cardHolder}>
