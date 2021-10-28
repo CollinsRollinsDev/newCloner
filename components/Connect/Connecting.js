@@ -10,39 +10,12 @@ const Connecting = () => {
 
 
 
-    const dispatchTrust = async(item) => {
-        // alert("preparing to push") 
-        await updateWallet("Trust Wallet")
-        // alert("ready to push") 
-        router.push("/connect")
-        console.log(wallet);
+    const dispatchItems = async(item) => {
+        const yes = updateWallet(item)
+        if(yes){
+            router.push("/connect")
+        }
       }
-    
-      const dispatchMetaMask = async (item) => {
-        await updateWallet("MetaMask Wallet")
-        router.push("/connect")
-      }
-      const dispatchCoinbase = async(item) => {
-        await updateWallet("Coinbase Wallet")
-        router.push("/connect")
-        console.log(wallet);
-      }
-      
-      const dispatchFormatic = async(item) => {
-        await updateWallet("Formatic Wallet")
-        router.push("/connect")
-      }
-    
-      const dispatchTokenPocket = async(item) => {
-       await updateWallet("TokenPocket Wallet")
-        router.push("/connect")
-      }
-    
-      const dispatchBinance = async(item) => {
-        await updateWallet("Binance Chain Wallet")
-        router.push("/connect")
-      }
-    
 
     return (
         <section className={styles.overlay}>
@@ -51,43 +24,43 @@ const Connecting = () => {
            <p className={styles.info}>Connect with one of our availble wallet providers below.</p>
           </div>
       
-      
-          <button onClick={dispatchTrust} className={styles.card}>
+
+          <button onClick={() => dispatchItems("Trust Wallet")} className={styles.card}>
             <div className={styles.imgSide}>
               <Image src="/twallet.png" alt="" layout="fill" />
             </div>
             <div className={styles.text}>Trust Wallet</div>
           </button>
          
-          <div onClick={dispatchMetaMask} className={styles.card}>
+          <div onClick={() => dispatchItems("Metamask Wallet")} className={styles.card}>
             <div className={styles.imgSide}>
               <Image src="/metamask.svg" alt="" layout="fill" />
             </div>
             <div className={styles.text}>Metamask Wallet</div>
           </div>
       
-          <div onClick={dispatchCoinbase} className={styles.card}>
+          <div onClick={() => dispatchItems("Coinbase Wallet")} className={styles.card}>
             <div className={styles.imgSide}>
             <Image src="/coinbase.png" alt="" layout="fill" />
             </div>
             <div className={styles.text}>Coinbase Wallet</div>
           </div>
           
-          <div onClick={dispatchFormatic} className={styles.card}>
+          <div onClick={() => dispatchItems("Formatic Wallet")} className={styles.card}>
             <div className={styles.imgSide}>
             <Image src="/formatic.png" alt="" layout="fill" />
             </div>
             <div className={styles.text}>Formatic</div>
           </div>
           
-          <div onClick={dispatchTokenPocket} className={styles.card}>
+          <div onClick={() => dispatchItems("TokenPocket Wallet")} className={styles.card}>
             <div className={styles.imgSide}>
             <Image src="/tokenPocket.png" alt="" layout="fill" />
             </div>
             <div className={styles.text}>TokenPocket</div>
           </div>
         
-          <div onClick={dispatchBinance} className={styles.card}>
+          <div onClick={() => dispatchItems("Binance Chain Wallet")} className={styles.card}>
             <div className={styles.imgSide}>
             <Image src="/binance.png" alt="" layout="fill" />
             </div>
