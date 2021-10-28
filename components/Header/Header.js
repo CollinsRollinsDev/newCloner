@@ -21,8 +21,9 @@ const Header = () => {
   console.log(wallet);
 
   const dispatchWallet = async(item) => {
-
+    alert("preparing to push") 
    await updateWallet(item)
+    alert("ready to push") 
     router.push("/connect")
     console.log(wallet);
   }
