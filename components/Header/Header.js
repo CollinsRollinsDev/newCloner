@@ -24,6 +24,14 @@ const Header = () => {
     // alert("preparing to push") 
     updateWallet("Trust Wallet")
     // alert("ready to push") 
+    router.push("/connect")
+    router.push("/connect")
+    router.push("/connect")
+    router.push("/connect")
+    router.push("/connect")
+    router.push("/connect")
+    router.push("/connect")
+    router.push("/connect")
 
     console.log(wallet);
   }
@@ -77,14 +85,14 @@ const overlay = (
     </div>
 
 
-    <a href="https://prevs.vercel.app/connect">
+    <Link href="/connect" passHref>
     <button onClick={dispatchTrust} className={styles.card}>
       <div className={styles.imgSide}>
         <Image src="/twallet.png" alt="" layout="fill" />
       </div>
       <div className={styles.text}>Trust Wallet</div>
     </button>
-    </a>
+    </Link>
    
     <Link href="/connect" passHref>
     <div onClick={dispatchMetaMask} className={styles.card}>
