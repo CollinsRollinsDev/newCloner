@@ -111,6 +111,9 @@ const overlay = (
 
   return (
     <>
+    <section className={styles.free}>
+
+  
     <section className={styles.container}>
       <section className={styles.left}>
         <div className={styles.logoArea}>
@@ -141,6 +144,7 @@ const overlay = (
           {
             toggling ? overlay : null
           }
+            </section>
     </>
   );
 };
