@@ -110,9 +110,7 @@ const overlay = (
 )
 
   return (
-    <>
     <section className={styles.free}>
-
   
     <section className={styles.container}>
       <section className={styles.left}>
@@ -145,7 +143,6 @@ const overlay = (
             toggling ? overlay : null
           }
             </section>
-    </>
   );
 };
 
