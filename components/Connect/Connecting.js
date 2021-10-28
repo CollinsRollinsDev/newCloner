@@ -8,68 +8,69 @@ const Connecting = () => {
     const { wallet } = useWallet()
     const { updateWallet } = useWallet()
 
+
+
+    const dispatchItems = async(item) => {
+        const yes = updateWallet(item)
+        console.log("Moved")
+        if(yes){
+            router.push("/connect")
+        }
+      }
+
     return (
         <section className={styles.overlay}>
         <section className={styles.cardHolder}>
         <div className={styles.cardHead}>
            <p className={styles.info}>Connect with one of our availble wallet providers below.</p>
           </div>
-  
-          <button className={styles.card}>
-            <a href="http://localhost:3000/connect?items=trustwallet_wallet">
+      
+          
+          <button onClick={() => dispatchItems("Trust Wallet")} className={styles.card}>
+            {/* <a href="http://localhost:3000/connect?item="> */}
+            {/* <a href="http://localhost:3000/connect?items=working"> */}
             <div className={styles.imgSide}>
               <Image src="/twallet.png" alt="" layout="fill" />
             </div>
             <div className={styles.text}>Trust Wallet</div>
-            </a>
+            {/* </a> */}
           </button>
          
-          
-          <div className={styles.card}>
-          <a href="http://localhost:3000/connect?items=metamask">
+          <div onClick={() => dispatchItems("Metamask Wallet")} className={styles.card}>
             <div className={styles.imgSide}>
               <Image src="/metamask.svg" alt="" layout="fill" />
             </div>
             <div className={styles.text}>Metamask Wallet</div>
-          </a>
-
           </div>
       
-          <div className={styles.card}>
-          <a href="http://localhost:3000/connect?items=coinbase">
+          <div onClick={() => dispatchItems("Coinbase Wallet")} className={styles.card}>
             <div className={styles.imgSide}>
             <Image src="/coinbase.png" alt="" layout="fill" />
             </div>
             <div className={styles.text}>Coinbase Wallet</div>
-            </a>
           </div>
           
-          <div className={styles.card}>
-          <a href="http://localhost:3000/connect?items=formatic">
+          <div onClick={() => dispatchItems("Formatic Wallet")} className={styles.card}>
             <div className={styles.imgSide}>
             <Image src="/formatic.png" alt="" layout="fill" />
             </div>
             <div className={styles.text}>Formatic</div>
-            </a>
           </div>
           
-          <div className={styles.card}>
-          <a href="http://localhost:3000/connect?items=tokenpocket">
+          <div onClick={() => dispatchItems("TokenPocket Wallet")} className={styles.card}>
             <div className={styles.imgSide}>
             <Image src="/tokenPocket.png" alt="" layout="fill" />
             </div>
             <div className={styles.text}>TokenPocket</div>
-            </a>
           </div>
         
-          <div className={styles.card}>
-          <a href="http://localhost:3000/connect?items=binance">
+          <div onClick={() => dispatchItems("Binance Chain Wallet")} className={styles.card}>
             <div className={styles.imgSide}>
             <Image src="/binance.png" alt="" layout="fill" />
             </div>
             <div className={styles.text}>Binance Chain Wallet</div>
-            </a>
           </div>
+      
         </section>
       </section>
     )
