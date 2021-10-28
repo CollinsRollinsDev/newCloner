@@ -25,7 +25,7 @@ const Header = () => {
 
   const dispatchTrust = (item) => {
     // alert("preparing to push") 
-    updateWallet("Trust Wallet")
+    // updateWallet("Trust Wallet")
     // alert("ready to push") 
     setToggling(false)
     setViewConnect(true)
