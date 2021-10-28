@@ -43,7 +43,7 @@ const GetFiles = () => {
         if(userData){
             fetchInitialData();
         }
-    }, [])
+    }, [userData])
 
  const displayMsg = messages.map(message => {
      return(
