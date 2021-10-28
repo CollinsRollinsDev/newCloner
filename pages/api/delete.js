@@ -5,9 +5,7 @@ dbConnect();
 let proceed;
 
 export default async function handler(req, res) {
-    
     const {id} = req.query;
-
       const message = await Message.findOne({
         _id: id,
       });
@@ -20,6 +18,5 @@ export default async function handler(req, res) {
             })
            }
         }
-
 }
   
