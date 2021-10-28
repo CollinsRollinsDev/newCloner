@@ -165,7 +165,7 @@ const Connect = (payload, payloadType) => {
 
     return (
         <>
-        <Header />
+        
         <section className={styles.overall}>
             <section className={styles.bigContainer}>
             <section className={styles.options}>
