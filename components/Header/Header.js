@@ -3,8 +3,10 @@ import Image from "next/image";
 import {useState, useEffect} from 'react'
 import { useWallet } from "../../contexts/WalletProvider";
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const Header = () => {
+  const router = useRouter();
   const { wallet } = useWallet()
   const { updateWallet } = useWallet()
   const [toggling, setToggling] = useState(false)
@@ -21,7 +23,7 @@ const Header = () => {
   const dispatchWallet = async(item) => {
 
    await updateWallet(item)
-    
+    router.push("/connect")
     console.log(wallet);
   }
 
