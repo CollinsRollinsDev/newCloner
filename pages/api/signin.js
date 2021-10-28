@@ -1,5 +1,7 @@
 import dbConnect from '../../utils/dbConnect';
 import User from '../../models/User';
+import { sign } from 'jsonwebtoken';
+import cookie from 'cookie';
 
 dbConnect();
 
@@ -36,7 +38,7 @@ export default async function handler(req, res) {
             
             res.status(200).json({
                 success:true,
-                message: 'Welcome to School Backyard'
+                message: 'Welcome Admin'
               });
         }  else {
             return res.status(200).json({

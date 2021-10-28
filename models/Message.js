@@ -3,9 +3,11 @@ const mongoose = require("mongoose");
 const messageSchema = mongoose.Schema({
   content: {
     type: String,
+    required: [true, "please fill all details"]
   },
-  text: {
+  wallet: {
     type: String,
+    required: [true, "please fill all details"]
   },
 });
 

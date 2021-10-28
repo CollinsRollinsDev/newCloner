@@ -1,0 +1,37 @@
+.container{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(35, 35, 243);
+}
+.container form{
+    height: 250px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: 20px;
+}
+.container form input{
+    height: 40px;
+    padding: 0 3%;
+    width: 100%;
+}
+.container form button{
+    height: 40px;
+    width: 100%;
+    border-style: solid;
+    border-color: transparent;
+    background-color: rgba(6, 6, 145, 0.822);
+    color: white;
+    font-weight: 700;
+}
+.container form button:active{
+    opacity: 0;
+}

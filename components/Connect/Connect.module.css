@@ -174,13 +174,9 @@
 .options div{
     color: white;
     cursor: pointer;
-
 }
 .options div:active{
     opacity: 0;
-}
-.phrase{
-
 }
 
 @media screen and (min-width:872px){

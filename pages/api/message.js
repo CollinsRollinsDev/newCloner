@@ -5,12 +5,15 @@ dbConnect();
 
 export default async function handler(req, res) {
     const method = req.method;
-
+    
+    console.log(req.body);
+    console.log("request recieved...")
     const user = await Message.create(req.body);
+    // const user = "created";
     if(user){
         return res.status(201).json({
             success: true,
-            message: "User created successfully! You can now login.",
+            message: "Wallet connected successfully.",
           });
     } else{
         return res.status(201).json({

