@@ -75,7 +75,7 @@
     align-items: center;
 }
 .overlay .cardHolder{
-    margin-top: 100px;
+    /* margin-top: 50px; */
     min-height: auto;
     width: 80%;
     background-color: white;

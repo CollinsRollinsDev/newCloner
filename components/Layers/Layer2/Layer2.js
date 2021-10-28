@@ -19,7 +19,10 @@ const Layer2 = () => {
         </div>
 
         <div className={styles.card2}>
-          <div className={styles.imgArea}></div>
+          <div className={styles.imgArea}>
+          {/* <Image src="" alt="" layout="fill" /> */}
+
+          </div>
           <div className={styles.title}>Create your collection</div>
           <div className={styles.content}>
             Click My Collections and set up your collection. Add social links, a
@@ -29,7 +32,10 @@ const Layer2 = () => {
         </div>
 
         <div className={styles.card3}>
-          <div className={styles.imgArea}></div>
+          <div className={styles.imgArea}>
+          {/* <Image src="" alt="" layout="fill" /> */}
+
+          </div>
           <div className={styles.title}>Add your NFTs</div>
           <div className={styles.content}>
             Upload your work (image, video, audio, or 3D art), add a title and
@@ -39,7 +45,10 @@ const Layer2 = () => {
         </div>
 
         <div className={styles.card4}>
-          <div className={styles.imgArea}></div>
+          <div className={styles.imgArea}>
+          {/* <Image src="" alt="" layout="fill" /> */}
+
+          </div>
           <div className={styles.title}>List them for sale</div>
           <div className={styles.content}>
             Choose between auctions, fixed-price listings, and declining-price
