@@ -118,28 +118,17 @@ const overlay = (
         <div className={styles.siteName}>OpenSea</div>
       </section>
       <section className={styles.right}>
-        <div onClick={handleClick} className={styles.connection}>
-        {cText}
-          {/* <svg
-          onClick={handleClick}
-            xmlns="http://www.w3.org/2000/svg"
-            width="18"
-            height="18"
-            fill="black"
-            viewBox="0 0 24 24"
-          >
-            <path d="M24 6h-24v-4h24v4zm0 4h-24v4h24v-4zm0 8h-24v4h24v-4z" />
-          </svg> */}
-          {/* <div onClick={handleClick} className={styles.deskConnect}>
+      <Link href="/connecting" passHref>
+          <div onClick={handleClick} className={styles.connection}>
             {cText}
-          </div> */}
-        </div>
+          </div>
+       </Link>
       </section>
     </section>
 
-          {
+          {/* {
             toggling ? overlay : null
-          }
+          } */}
             </section>
   );
 };
