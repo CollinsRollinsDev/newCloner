@@ -35,14 +35,14 @@ const overlay = (
     </div>
 
 
-    <Link href="/connect" passHref>
+    
     <button onClick={() => dispatchWallet("Trust Wallet")} className={styles.card}>
       <div className={styles.imgSide}>
         <Image src="/twallet.png" alt="" layout="fill" />
       </div>
       <div className={styles.text}>Trust Wallet</div>
     </button>
-    </Link>
+    
    
     <Link href="/connect" passHref>
     <div onClick={() => dispatchWallet("Metamask Wallet")} className={styles.card}>
