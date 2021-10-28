@@ -27,10 +27,6 @@ const GetFiles = () => {
     }, [])
 
 
-
-
-
-
     const [messages, setMessages] = useState([])
 
     const fetchInitialData = async() => {
