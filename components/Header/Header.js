@@ -96,14 +96,18 @@ const overlay = (
       <div className={styles.text}>Metamask Wallet</div>
     </div>
 
-    <Link href="/connect" passHref>
+    
     <div onClick={dispatchCoinbase} className={styles.card}>
-      <div className={styles.imgSide}>
+    <Link href="/connect" passHref>
+        <div>
+        <div className={styles.imgSide}>
       <Image src="/coinbase.png" alt="" layout="fill" />
       </div>
       <div className={styles.text}>Coinbase Wallet</div>
+        </div>
+      </Link>
     </div>
-    </Link>
+    
     
     <Link href="/connect" passHref>
     <div onClick={dispatchFormatic} className={styles.card}>
