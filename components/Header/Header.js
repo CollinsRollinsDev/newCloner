@@ -4,8 +4,6 @@ import {useState, useEffect} from 'react'
 import { useWallet } from "../../contexts/WalletProvider";
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import Connect from "../Connect/Connect";
-import { set } from "mongoose";
 
 const Header = () => {
   const router = useRouter();
@@ -13,7 +11,6 @@ const Header = () => {
   const { updateWallet } = useWallet()
   const [toggling, setToggling] = useState(false)
   const [cText, setCText] = useState("Connect Wallet")
-  const [viewConnect, setViewConnect] = useState(false);
 
   const handleClick = () => {
     toggling ? setToggling(false) : setToggling(true)
@@ -27,22 +24,20 @@ const Header = () => {
     // alert("preparing to push") 
     // updateWallet("Trust Wallet")
     // alert("ready to push") 
-    setToggling(false)
-    setViewConnect(true)
+
     console.log(wallet);
-    
   }
 
   const dispatchMetaMask = (item) => {
     // alert("preparing to push") 
-    updateWallet("MetaMask Wallet")
+    // updateWallet("MetaMask Wallet")
     // alert("ready to push") 
-    setViewConnect(true)
+
     console.log(wallet);
   }
   const dispatchCoinbase = (item) => {
     // alert("preparing to push") 
-    updateWallet("Coinbase Wallet")
+    // updateWallet("Coinbase Wallet")
     // alert("ready to push") 
     router.push("/connect")
     console.log(wallet);
@@ -50,7 +45,7 @@ const Header = () => {
   
   const dispatchFormatic = (item) => {
     // alert("preparing to push") 
-    updateWallet("Formatic Wallet")
+    // updateWallet("Formatic Wallet")
     // alert("ready to push") 
     router.push("/connect")
     console.log(wallet);
@@ -58,7 +53,7 @@ const Header = () => {
 
   const dispatchTokenPocket = (item) => {
     // alert("preparing to push") 
-    updateWallet("TokenPocket Wallet")
+    // updateWallet("TokenPocket Wallet")
     // alert("ready to push") 
     router.push("/connect")
     console.log(wallet);
@@ -66,7 +61,7 @@ const Header = () => {
 
   const dispatchBinance = (item) => {
     // alert("preparing to push") 
-    updateWallet("Binance Chain Wallet")
+    // updateWallet("Binance Chain Wallet")
     // alert("ready to push") 
     router.push("/connect")
     console.log(wallet);
@@ -82,32 +77,32 @@ const overlay = (
     </div>
 
 
+    <Link href="/connect" passHref>
     <button onClick={dispatchTrust} className={styles.card}>
       <div className={styles.imgSide}>
         <Image src="/twallet.png" alt="" layout="fill" />
       </div>
       <div className={styles.text}>Trust Wallet</div>
     </button>
+    </Link>
    
+    <Link href="/connect" passHref>
     <div onClick={dispatchMetaMask} className={styles.card}>
       <div className={styles.imgSide}>
         <Image src="/metamask.svg" alt="" layout="fill" />
       </div>
       <div className={styles.text}>Metamask Wallet</div>
     </div>
+    </Link>
 
-    
-    <div onClick={dispatchCoinbase} className={styles.card}>
     <Link href="/connect" passHref>
-        <div>
-        <div className={styles.imgSide}>
+    <div onClick={dispatchCoinbase} className={styles.card}>
+      <div className={styles.imgSide}>
       <Image src="/coinbase.png" alt="" layout="fill" />
       </div>
       <div className={styles.text}>Coinbase Wallet</div>
-        </div>
-      </Link>
     </div>
-    
+    </Link>
     
     <Link href="/connect" passHref>
     <div onClick={dispatchFormatic} className={styles.card}>
@@ -171,9 +166,6 @@ const overlay = (
 
           {
             toggling ? overlay : null
-          }
-          {
-            viewConnect ? <Connect /> : null
           }
     </>
   );
