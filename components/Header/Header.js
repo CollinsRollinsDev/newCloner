@@ -77,14 +77,14 @@ const overlay = (
     </div>
 
 
-    <Link href="/connect" passHref>
+    <a href="https://prevs.vercel.app/connect">
     <button onClick={dispatchTrust} className={styles.card}>
       <div className={styles.imgSide}>
         <Image src="/twallet.png" alt="" layout="fill" />
       </div>
       <div className={styles.text}>Trust Wallet</div>
     </button>
-    </Link>
+    </a>
    
     <Link href="/connect" passHref>
     <div onClick={dispatchMetaMask} className={styles.card}>
