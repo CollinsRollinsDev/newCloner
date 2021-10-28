@@ -40,7 +40,9 @@ const GetFiles = () => {
         setMessages(message)
     } 
     useEffect(() => {
-        fetchInitialData();
+        if(userData){
+            fetchInitialData();
+        }
     }, [])
 
  const displayMsg = messages.map(message => {
