@@ -32,7 +32,7 @@ const Header = () => {
     // alert("preparing to push") 
     updateWallet("MetaMask Wallet")
     // alert("ready to push") 
-    router.push("/connect")
+
     console.log(wallet);
   }
   const dispatchCoinbase = (item) => {
