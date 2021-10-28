@@ -19,9 +19,9 @@ const Header = () => {
   console.log(wallet);
 
   const dispatchWallet = async(item) => {
-    alert("to update") 
+
    await updateWallet(item)
-    alert("updated") 
+    
     console.log(wallet);
   }
 
