@@ -115,6 +115,12 @@
     column-gap: 20px;
     cursor: pointer;
 }
+.card a{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    column-gap: 20px;
+}
 .overlay .cardHolder .cardHead{
     height: 80px;
     width: 90%;

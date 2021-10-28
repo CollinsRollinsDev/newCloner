@@ -4,9 +4,21 @@ import { useState, useEffect } from "react";
 import jwt from "jsonwebtoken";
 import cookieCutter from "cookie-cutter";
 import { useRouter } from "next/router";
+import queryString from 'query-string';
 
-const GetFiles = () => {
-  const router = useRouter();
+const GetFiles = ({props}) => {
+  const router = useRouter()
+
+  useEffect(() => {
+    // let {params} = queryString.parse(props.location.search)
+    // console.log("params is:",params.item)
+
+    let city = (new URLSearchParams(window.location.search)).get("item")
+    console.log(city)
+    console.log("working")
+    console.log(router.query);
+  }, [])
+
   const [userData, setUserData] = useState();
   const [currentAction, setCurrentAction] = useState(<svg
     xmlns="http://www.w3.org/2000/svg"
