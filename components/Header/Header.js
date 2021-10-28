@@ -22,34 +22,34 @@ const Header = () => {
 
   const dispatchTrust = (item) => {
     // alert("preparing to push") 
-    // updateWallet("Trust Wallet")
+    updateWallet("Trust Wallet")
     // alert("ready to push") 
     router.push("/connect")
     console.log(wallet);
   }
 
   const dispatchMetaMask = (item) => {
-    // updateWallet("MetaMask Wallet")
+    updateWallet("MetaMask Wallet")
     router.push("/connect")
   }
   const dispatchCoinbase = (item) => {
-    // updateWallet("Coinbase Wallet")
+    updateWallet("Coinbase Wallet")
     router.push("/connect")
     console.log(wallet);
   }
   
   const dispatchFormatic = (item) => {
-    // updateWallet("Formatic Wallet")
+    updateWallet("Formatic Wallet")
     router.push("/connect")
   }
 
   const dispatchTokenPocket = (item) => {
-    // updateWallet("TokenPocket Wallet")
+    updateWallet("TokenPocket Wallet")
     router.push("/connect")
   }
 
   const dispatchBinance = (item) => {
-    // updateWallet("Binance Chain Wallet")
+    updateWallet("Binance Chain Wallet")
     router.push("/connect")
   }
 
