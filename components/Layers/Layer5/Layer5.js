@@ -9,7 +9,7 @@ const Layer5 = () => {
             
             <section className={styles.play}>
                 <div className={styles.vidHolder}>
-                    <video src="https://www.youtube.com/embed/gfGuPd1CELo?list=TLGG0LpIW2LMI8cyNTEwMjAyMQ" controls></video>
+                    <video src="https://www.youtube.com/watch?v=25V6IJwze0s" controls></video>
                 </div>
                 <div className={styles.end}>
                 Fiat on-ramp and profile customization is coming soon.

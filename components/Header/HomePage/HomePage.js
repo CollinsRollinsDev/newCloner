@@ -16,7 +16,7 @@ const HomePage = () => {
             <Layer2 />
             <Layer3 />
             <Layer4 />
-            <Layer5 />
+            {/* <Layer5 /> */}
             <Footer />
         </section>
     )
