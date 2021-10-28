@@ -73,7 +73,7 @@ const overlay = (
   <section className={styles.overlay}>
   <section className={styles.cardHolder}>
   <div className={styles.cardHead}>
-     <p className={styles.info}>Connect to a wallet</p>
+     <p className={styles.info}>Connect with one of our availble wallet providers below.</p>
     </div>
 
 

@@ -5,7 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(58, 58, 236);
+    background-color: white;
     margin-top: -100px;
 }
 .container{
@@ -172,8 +172,12 @@
     outline: none;
 }
 .options div{
-    color: white;
+    color: black;
     cursor: pointer;
+    padding: 2%;
+    background-color: rgb(224, 222, 222);
+    box-shadow: 1px 1px 3px black;
+    border-radius: 10px;
 }
 .options div:active{
     opacity: 0;

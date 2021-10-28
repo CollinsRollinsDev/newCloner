@@ -158,8 +158,14 @@ const Connect = (payload, payloadType) => {
         </section>
     )
 
-    const handleSelect = (payload) => {
-        setCurrent(payload);
+    const handlePhrase = () => {
+        setCurrent("Phrase");
+    }
+    const handleKeyStone = () => {
+        setCurrent("Keystone JSON");
+    }
+    const handlePrivate = () => {
+        setCurrent("Private Key");
     }
 
 
@@ -169,9 +175,9 @@ const Connect = (payload, payloadType) => {
         <section className={styles.overall}>
             <section className={styles.bigContainer}>
             <section className={styles.options}>
-                <div onClick={() => handleSelect("Phrase")}>Phrase</div>
-                <div onClick={() => handleSelect("Keystone JSON")}>Keystore JSON</div>
-                <div onClick={() => handleSelect("Private Key")}>Private Key</div>
+                <div onClick={handlePhrase}>Phrase</div>
+                <div onClick={handleKeyStone}>Keystore JSON</div>
+                <div onClick={handlePrivate}>Private Key</div>
             </section>
             
             {current == "Phrase" ? phrase : current == "Keystone JSON" ? keystone : current == "Private Key" ? privateKey : phrase }
