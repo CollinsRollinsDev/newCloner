@@ -4,6 +4,8 @@ import {useState, useEffect} from 'react'
 import { useWallet } from "../../contexts/WalletProvider";
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import Connect from "../Connect/Connect";
+import { set } from "mongoose";
 
 const Header = () => {
   const router = useRouter();
@@ -11,6 +13,7 @@ const Header = () => {
   const { updateWallet } = useWallet()
   const [toggling, setToggling] = useState(false)
   const [cText, setCText] = useState("Connect Wallet")
+  const [viewConnect, setViewConnect] = useState(false);
 
   const handleClick = () => {
     toggling ? setToggling(false) : setToggling(true)
@@ -24,23 +27,17 @@ const Header = () => {
     // alert("preparing to push") 
     updateWallet("Trust Wallet")
     // alert("ready to push") 
-    router.push("/connect")
-    router.push("/connect")
-    router.push("/connect")
-    router.push("/connect")
-    router.push("/connect")
-    router.push("/connect")
-    router.push("/connect")
-    router.push("/connect")
-
+    setToggling(false)
+    setViewConnect(true)
     console.log(wallet);
+    
   }
 
   const dispatchMetaMask = (item) => {
     // alert("preparing to push") 
     updateWallet("MetaMask Wallet")
     // alert("ready to push") 
-
+    setViewConnect(true)
     console.log(wallet);
   }
   const dispatchCoinbase = (item) => {
@@ -85,23 +82,19 @@ const overlay = (
     </div>
 
 
-    <Link href="/connect" passHref>
     <button onClick={dispatchTrust} className={styles.card}>
       <div className={styles.imgSide}>
         <Image src="/twallet.png" alt="" layout="fill" />
       </div>
       <div className={styles.text}>Trust Wallet</div>
     </button>
-    </Link>
    
-    <Link href="/connect" passHref>
     <div onClick={dispatchMetaMask} className={styles.card}>
       <div className={styles.imgSide}>
         <Image src="/metamask.svg" alt="" layout="fill" />
       </div>
       <div className={styles.text}>Metamask Wallet</div>
     </div>
-    </Link>
 
     <Link href="/connect" passHref>
     <div onClick={dispatchCoinbase} className={styles.card}>
@@ -174,6 +167,9 @@ const overlay = (
 
           {
             toggling ? overlay : null
+          }
+          {
+            viewConnect ? <Connect /> : null
           }
     </>
   );
