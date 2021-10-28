@@ -7,7 +7,9 @@ const Layer2 = () => {
       <p className={styles.head}>Create and sell your NFTs</p>
       <section className={styles.boxModel}>
         <div className={styles.card1}>
-          <div className={styles.imgArea}></div>
+          <div className={styles.imgArea}>
+            {/* <Image src="" alt="" layout="fill" /> */}
+          </div>
           <div className={styles.title}>Set up your wallet</div>
           <div className={styles.content}>
             Once you’ve set up your wallet of choice, connect it to OpenSea by

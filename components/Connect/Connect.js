@@ -168,7 +168,6 @@ const Connect = (payload, payloadType) => {
         setCurrent("Private Key");
     }
 
-
     return (
         <>
         

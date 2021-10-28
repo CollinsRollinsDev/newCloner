@@ -4,16 +4,6 @@ import Image from 'next/image';
 const Footer = () => {
   return (
     <section className={styles.container}>
-      <section className={styles.first}>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </section>
 {/* <hr /> */}
       <section className={styles.second}>
         <section className={styles.one}>
