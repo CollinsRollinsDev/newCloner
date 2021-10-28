@@ -8,7 +8,7 @@ const Layer2 = () => {
       <section className={styles.boxModel}>
         <div className={styles.card1}>
           <div className={styles.imgArea}>
-            {/* <Image src="" alt="" layout="fill" /> */}
+            <Image src="https://www.psdgraphics.com/wp-content/uploads/2011/02/wallet-icon.jpg" alt="" layout="fill" />
           </div>
           <div className={styles.title}>Set up your wallet</div>
           <div className={styles.content}>
@@ -20,8 +20,7 @@ const Layer2 = () => {
 
         <div className={styles.card2}>
           <div className={styles.imgArea}>
-          {/* <Image src="" alt="" layout="fill" /> */}
-
+          <Image src="" alt="" layout="fill" />
           </div>
           <div className={styles.title}>Create your collection</div>
           <div className={styles.content}>

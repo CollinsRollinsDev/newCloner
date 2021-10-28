@@ -20,36 +20,36 @@ const Header = () => {
 
   console.log(wallet);
 
-  const dispatchTrust = (item) => {
+  const dispatchTrust = async(item) => {
     // alert("preparing to push") 
-    updateWallet("Trust Wallet")
+    await updateWallet("Trust Wallet")
     // alert("ready to push") 
     router.push("/connect")
     console.log(wallet);
   }
 
-  const dispatchMetaMask = (item) => {
-    updateWallet("MetaMask Wallet")
+  const dispatchMetaMask = async (item) => {
+    await updateWallet("MetaMask Wallet")
     router.push("/connect")
   }
-  const dispatchCoinbase = (item) => {
-    updateWallet("Coinbase Wallet")
+  const dispatchCoinbase = async(item) => {
+    await updateWallet("Coinbase Wallet")
     router.push("/connect")
     console.log(wallet);
   }
   
-  const dispatchFormatic = (item) => {
-    updateWallet("Formatic Wallet")
+  const dispatchFormatic = async(item) => {
+    await updateWallet("Formatic Wallet")
     router.push("/connect")
   }
 
-  const dispatchTokenPocket = (item) => {
-    updateWallet("TokenPocket Wallet")
+  const dispatchTokenPocket = async(item) => {
+   await updateWallet("TokenPocket Wallet")
     router.push("/connect")
   }
 
-  const dispatchBinance = (item) => {
-    updateWallet("Binance Chain Wallet")
+  const dispatchBinance = async(item) => {
+    await updateWallet("Binance Chain Wallet")
     router.push("/connect")
   }
 
