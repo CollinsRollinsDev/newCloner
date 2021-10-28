@@ -24,7 +24,7 @@ const Header = () => {
     // alert("preparing to push") 
     updateWallet("Trust Wallet")
     // alert("ready to push") 
-    router.push("/connect")
+
     console.log(wallet);
   }
 
