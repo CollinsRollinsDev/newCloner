@@ -9,7 +9,7 @@ const Layer4 = () => {
             <section className={styles.cardsHolder}>
                 <div className={styles.card}>
                     <div className={styles.up}>
-                      <Image src="/img1.jpg" alt="" layout="fill" />
+                      <Image src="https://opensea.io/static/images/categories/art.png" alt="" layout="fill" />
 
                     </div>
                     <div className={styles.down}>
@@ -19,7 +19,7 @@ const Layer4 = () => {
 
                 <div className={styles.card}>
              <div className={styles.up}>
-                      <Image src="/img1.jpg" alt="" layout="fill" />
+                      <Image src="https://opensea.io/static/images/categories/music.png" alt="" layout="fill" />
 
                     </div>
                     <div className={styles.down}>
@@ -29,7 +29,7 @@ const Layer4 = () => {
 
                 <div className={styles.card}>
                 <div className={styles.up}>
-                      <Image src="/img1.jpg" alt="" layout="fill" />
+                      <Image src="https://opensea.io/static/images/categories/domain-names.png" alt="" layout="fill" />
 
                     </div>
                     <div className={styles.down}>
@@ -39,7 +39,7 @@ const Layer4 = () => {
 
                 <div className={styles.card}>
                 <div className={styles.up}>
-                      <Image src="/img1.jpg" alt="" layout="fill" />
+                      <Image src="https://opensea.io/static/images/categories/domain-names.png" alt="" layout="fill" />
 
                     </div>
                     <div className={styles.down}>
@@ -49,7 +49,7 @@ const Layer4 = () => {
 
                 <div className={styles.card}>
                 <div className={styles.up}>
-                      <Image src="/img1.jpg" alt="" layout="fill" />
+                      <Image src="https://opensea.io/static/images/categories/trading-cards.png" alt="" layout="fill" />
 
                     </div>
                     <div className={styles.down}>
@@ -59,7 +59,7 @@ const Layer4 = () => {
 
                     <div className={styles.card}>
                     <div className={styles.up}>
-                      <Image src="/img1.jpg" alt="" layout="fill" />
+                      <Image src="https://opensea.io/static/images/categories/collectibles.png" alt="" layout="fill" />
 
                     </div>
                         <div className={styles.down}>
@@ -69,7 +69,7 @@ const Layer4 = () => {
 
                     <div className={styles.card}>
                     <div className={styles.up}>
-                      <Image src="/img1.jpg" alt="" layout="fill" />
+                      <Image src="https://opensea.io/static/images/categories/utility.png" alt="" layout="fill" />
 
                     </div>
                         <div className={styles.down}>
@@ -79,7 +79,7 @@ const Layer4 = () => {
 
                     <div className={styles.card}>
                     <div className={styles.up}>
-                      <Image src="/img1.jpg" alt="" layout="fill" />
+                      <Image src="https://opensea.io/static/images/categories/all-nfts.pngg" alt="" layout="fill" />
 
                     </div>
                         <div className={styles.down}>

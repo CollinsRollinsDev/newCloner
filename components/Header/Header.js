@@ -53,8 +53,6 @@ const Header = () => {
     router.push("/connect")
   }
 
-
-
 const overlay = (
   <section className={styles.overlay}>
   <section className={styles.cardHolder}>

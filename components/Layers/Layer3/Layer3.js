@@ -9,7 +9,7 @@ const Layer3 = () => {
             <section className={styles.cardsHolder}>
                 <div className={styles.card1}>
                     <div className={styles.up}>
-                      <Image src="/img1.jpg" alt="" layout="fill" />
+                      <Image src="https://lh3.googleusercontent.com/vfYB4RarIqixy2-wyfP4lIdK6fsOT8uNrmKxvYCJdjdRwAMj2ZjC2zTSxL-YKky0s-4Pb6eML7ze3Ouj54HrpUlfSWx52xF_ZK2TYw=h200" alt="" layout="fill" />
 
                     </div>
                     <div className={styles.down}>

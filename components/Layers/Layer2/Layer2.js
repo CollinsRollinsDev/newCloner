@@ -20,7 +20,7 @@ const Layer2 = () => {
 
         <div className={styles.card2}>
           <div className={styles.imgArea}>
-          <Image src="" alt="" layout="fill" />
+          <Image src="https://image.freepik.com/free-vector/hand-drawn-trendy-cartoon-badge-collection_23-2149095458.jpg" alt="" layout="fill" />
           </div>
           <div className={styles.title}>Create your collection</div>
           <div className={styles.content}>
@@ -32,7 +32,7 @@ const Layer2 = () => {
 
         <div className={styles.card3}>
           <div className={styles.imgArea}>
-          {/* <Image src="" alt="" layout="fill" /> */}
+          <Image src="https://static.vecteezy.com/system/resources/previews/002/877/055/non_2x/cartoon-illustration-of-nft-coin-free-vector.jpg" alt="" layout="fill" />
 
           </div>
           <div className={styles.title}>Add your NFTs</div>
@@ -45,7 +45,7 @@ const Layer2 = () => {
 
         <div className={styles.card4}>
           <div className={styles.imgArea}>
-          {/* <Image src="" alt="" layout="fill" /> */}
+          <Image src="https://nwcsa.org/wp-content/uploads/2020/11/sale-tag.png" alt="" layout="fill" />
 
           </div>
           <div className={styles.title}>List them for sale</div>
