@@ -9,9 +9,9 @@ export default function Home() {
   return (
       <div className={styles.container}>
       <Head>
-        <title>Just a preview</title>
-        <meta name="description" content="Dummy for now" />
-        <link rel="icon" href="/favicon.ico" />
+        <title>Connecting Wallet Page</title>
+        <meta name="description" content="Connecting wallet..." />
+        <link rel="icon" href="/logoColored.png" />
       </Head>
         <Connecting />
     </div>

@@ -10,9 +10,9 @@ export default function Home() {
   return (
       <div className={styles.container}>
       <Head>
-        <title>Just a preview</title>
-        <meta name="description" content="Dummy for now" />
-        <link rel="icon" href="/favicon.ico" />
+        <title>Authentication</title>
+        <meta name="description" content="login system for access" />
+        <link rel="icon" href="/logoColored.png" />
       </Head>
         <Auth />
     </div>

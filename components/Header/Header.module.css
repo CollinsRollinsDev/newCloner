@@ -115,6 +115,23 @@
     column-gap: 20px;
     cursor: pointer;
 }
+
+.overlay .cardHolder a{
+    height: 50px;
+    width: 100%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(138, 137, 137) transparent transparent;
+    /* background-color: rgb(221, 216, 216); */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-weight: 700;
+    padding: 0 2%;
+    column-gap: 20px;
+    cursor: pointer;
+    position:relative;
+}
 .card a{
     display: flex;
     justify-content: flex-start;
